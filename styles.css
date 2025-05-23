@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.left-nav, .right-nav {
+    flex-basis: 100px; /* Adjust this value as needed */
+}
+
+.title-link, .home-link, .about-link {
+    color: white;
+    text-decoration: none;
+}
+
+.title-link:hover, .home-link:hover, .about-link:hover {
+    text-decoration: underline;
+}
+
+.home-link, .about-link {
+    font-size: 0.9em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 0.5em;
+}
+
+#gallery {
+    padding: 2rem;
+}
+
+.sketch-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.sketch-link {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.sketch-link:hover {
+    transform: translateY(-5px);
+}
+
+.sketch-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#sketch-container {
+    margin-bottom: 2rem;
+}
+
+.sketch-description {
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.about-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
