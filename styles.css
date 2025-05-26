@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #1e1e1e;
+    color: #ffffff;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -25,12 +26,13 @@ header h1 {
 }
 
 .title-link, .home-link, .about-link {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .title-link:hover, .home-link:hover, .about-link:hover {
     text-decoration: underline;
+    color: #bb86fc;
 }
 
 .home-link, .about-link {
@@ -61,24 +63,52 @@ nav {
 }
 
 .sketch-link {
-    background-color: white;
+    background-color: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     padding: 1rem;
     text-decoration: none;
-    color: #333;
-    transition: transform 0.3s ease;
+    color: #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sketch-link:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
 
 .sketch-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 2rem;
+}
+
+.sketch-page article {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.sketch-page h2 {
+    color: #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sketch-container {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.introduction, .explanation, .conclusion {
+    margin-bottom: 2rem;
 }
 
 #sketch-container {
@@ -87,9 +117,9 @@ nav {
 
 .sketch-description {
     max-width: 800px;
-    background-color: white;
+    background-color: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     padding: 2rem;
 }
 
@@ -97,8 +127,13 @@ nav {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: white;
+    background-color: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     margin-top: 2rem;
+}
+
+/* Styles for KaTeX equations */
+.katex {
+    color: #e0e0e0;
 }
