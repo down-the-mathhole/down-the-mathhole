@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Many Sides - Down the Mathhole</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <!-- KaTeX JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <!-- KaTeX Auto-render Extension -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="../../index.html" class="home-link">Down the Mathhole</a></h1>
+        <nav>
+            <a href="../../about.html" class="about-link">About</a>
+        </nav>
+    </header>
+    <main class="sketch-page">
+        <article>
+            <h2>How Many Sides?</h2>
+            
+            <section class="introduction">
+                <p>
+                    Divide the circumference of a circle by its radius. For any circle, the result is
+                    \[
+                        \pi \approx 3.1415 \dots
+                    \]
+                </p>
+                <p>
+                    Suppose you wanted a more precise approximation of \(\pi\), 
+                    e.g., more than 4 digits after the decimal. One approach
+                    is to approximate the circumference by the perimeter of a regular polygon.
+                    As you increase the number of sides, the polygon gets closer and closer to
+                    a circle. 
+                </p>
+                <p>
+                    How many sides does the polygon need to have to obtain the 
+                    known 5th digit of \(\pi\)? 
+                </p>
+            </section>
+
+            <section class="sketch-container" id="sketch1a"></section>
+
+            <section class="explanation">
+                <p>
+                    In the animation above, we're using p5.js to create a moving sine wave. The wave is drawn using a series 
+                    of ellipses, each positioned according to the sine function at a given point in time.
+                </p>
+                <p>
+                    The movement of the wave is achieved by incrementing the phase (\(\theta\)) in each frame:
+                    \[
+                    \theta_{new} = \theta_{old} + \Delta\theta
+                    \]
+                    Where \(\Delta\theta\) determines the speed of the wave's motion.
+                </p>
+            </section>
+        </article>
+    </main>
+    <script src="sketch1a.js"></script>
+</body>
+</html>
