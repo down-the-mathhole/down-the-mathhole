@@ -3,27 +3,12 @@ new p5(function(p) {
     let radius = 150;
     let yPerimeterDisplay = 350;
     let s = 5; // Number of sides for the polygon
-    let sidesKatexElement;
-    let perimeterKatexElement;
     let buttonColor;
     let buttons = [];
 
     p.setup = function() {
         let canvas = p.createCanvas(400, 450);
         buttonColor = p.color(187, 134, 252);
-
-        // Create div elements for KaTeX rendering
-        sidesKatexElement = p.createDiv('');
-        sidesKatexElement.position(0, yPerimeterDisplay + 30);
-        sidesKatexElement.style('width', '100%');
-        sidesKatexElement.style('text-align', 'center');
-        sidesKatexElement.style('color', 'white');
-
-        perimeterKatexElement = p.createDiv('');
-        perimeterKatexElement.position(0, yPerimeterDisplay + 60);
-        perimeterKatexElement.style('width', '100%');
-        perimeterKatexElement.style('text-align', 'center');
-        perimeterKatexElement.style('color', 'white');
 
         // Create buttons
         buttons.push(new Button('-10', 25, 410, () => changeSides(-10)));
@@ -68,7 +53,7 @@ new p5(function(p) {
         p.noFill();
         p.circle(center, center, 2*radius);
         p.renderPolygon(s);
-        p.renderPerimeterDisplay(s, radius);
+        p.renderPerimeterDisplay(s);
         p.renderSidesDisplay(s);
 
         // Display buttons
@@ -97,20 +82,22 @@ new p5(function(p) {
         p.endShape(p.CLOSE);
     };
 
-    // Function to render the perimeter display using KaTeX
+    // Function to render the perimeter display using p5.js text
     p.renderPerimeterDisplay = function(n) {
         let angle = p.TWO_PI / n;
         let piApprox = n * p.sin(0.5 * angle);
-        katex.render(`\\text{Perimeter} \\approx ${p.nf(piApprox, 0, 4)}`, perimeterKatexElement.elt, {
-            throwOnError: false
-        });
+        p.fill(255);
+        p.textAlign(p.CENTER);
+        p.textSize(16);
+        p.text(`Perimeter ≈ ${p.nf(piApprox, 0, 4)}`, p.width/2, yPerimeterDisplay + 60);
     };
 
-    // Function to render the sides display using KaTeX
+    // Function to render the sides display using p5.js text
     p.renderSidesDisplay = function(n) {
-        katex.render(`\\text{Sides} = ${n}`, sidesKatexElement.elt, {
-            throwOnError: false
-        });
+        p.fill(255);
+        p.textAlign(p.CENTER);
+        p.textSize(16);
+        p.text(`Sides = ${n}`, p.width/2, yPerimeterDisplay + 30);
     };
 
 }, 'sketch1a');
