@@ -29,9 +29,19 @@
                 <p>
                     Divide the circumference of a circle by its radius. For any circle, the result is
                     \[
-                        \pi \approx 3.1415 \dots
+                        \pi \approx 3.1415926535 \dots
                     \]
+                    The digits of \(\pi\) don't follow a known pattern. So how do we know the 10th digit? Or the 10000th?
                 </p>
+                <p>
+                    The perimeter of a regular polygon is an easy-to-compute approximation of a circle's circumference.
+                    You can find \(pi\) to any precision by adding sides to the polygon.
+                </p>
+            </section>
+
+            <section class="sketch-container" id="sketch1a"></section>
+
+            <section class="explanation">
                 <p>
                     Suppose you wanted a more precise approximation of \(\pi\), 
                     e.g., more than 4 digits after the decimal. One approach
@@ -42,22 +52,6 @@
                 <p>
                     How many sides does the polygon need to have to obtain the 
                     known 5th digit of \(\pi\)? 
-                </p>
-            </section>
-
-            <section class="sketch-container" id="sketch1a"></section>
-
-            <section class="explanation">
-                <p>
-                    In the animation above, we're using p5.js to create a moving sine wave. The wave is drawn using a series 
-                    of ellipses, each positioned according to the sine function at a given point in time.
-                </p>
-                <p>
-                    The movement of the wave is achieved by incrementing the phase (\(\theta\)) in each frame:
-                    \[
-                    \theta_{new} = \theta_{old} + \Delta\theta
-                    \]
-                    Where \(\Delta\theta\) determines the speed of the wave's motion.
                 </p>
             </section>
         </article>
